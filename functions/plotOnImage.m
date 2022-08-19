@@ -1,5 +1,5 @@
 function plotOnImage(img,p2D, p3D, K, G, index)
-figure;
+figure(90);
 imshow(img);
 hold on;
 if length(p2D) > 0

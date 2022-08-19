@@ -19,7 +19,7 @@ def _compute_conf_thresh(data):
 
 def make_matching_figure(
         img0, img1, mkpts0, mkpts1, color,
-        kpts0=None, kpts1=None, text=[], dpi=75, path=None):
+        kpts0=None, kpts1=None, text=[], dpi=75, path='./'):
     # draw image pair
     assert mkpts0.shape[0] == mkpts1.shape[0], f'mkpts0: {mkpts0.shape[0]} v.s. mkpts1: {mkpts1.shape[0]}'
     fig, axes = plt.subplots(1, 2, figsize=(10, 6), dpi=dpi)
@@ -59,7 +59,7 @@ def make_matching_figure(
 
     # save or return figure
     if path:
-        plt.savefig(str(path), bbox_inches='tight', pad_inches=0)
+        plt.savefig('match_loftr', bbox_inches='tight', pad_inches=0)
         plt.close()
     else:
         return fig

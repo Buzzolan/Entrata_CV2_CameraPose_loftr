@@ -26,7 +26,7 @@ p2D = VisPoints(:,2:3);
 p3D = Xvis;
 
 [K, R, T] = read_xmp(xmpFile);
-save('dante_get_points')
+
 end
 
 
